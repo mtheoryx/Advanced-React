@@ -1,9 +1,9 @@
+const {
+  forwardTo // Direct proxy to the prisma db interface
+} = require('prisma-binding');
+
 const Query = {
-  dogs(parent, arguments, ctx, info) {
-    global.dogs = global.dogs || [];
-    return global.dogs;
-    // return [{name: 'Snickers'}, {name: 'Sunny'}]
-  }
+  items: forwardTo('db')
 };
 
 module.exports = Query;
