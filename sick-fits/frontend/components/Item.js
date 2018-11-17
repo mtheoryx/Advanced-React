@@ -15,7 +15,7 @@ class Item extends Component {
 
   render() {
     const { item } = this.props;
-    console.table(item);
+
     return (
       <ItemStyles>
         {item.image && <img src={item.image} alt={item.title} />}
